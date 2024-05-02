@@ -58,4 +58,8 @@ public interface BSEConstant {
             "ZIC", "SHVR", "ZIP", "PRDE", "PRSH", "ZIPSH", "GVWY", "PRZI", "SNPR") // may need ZIPDE
             .collect(Collectors.toList());
 
+    /**
+     * BSE dump filename
+     */
+    String BSE_FILENAME = "market_session_experiment_result.csv";
 }

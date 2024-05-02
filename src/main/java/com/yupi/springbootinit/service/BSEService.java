@@ -6,7 +6,6 @@ import com.yupi.springbootinit.model.py4jInterface.AlgorithmParameterTransfer;
 import org.springframework.stereotype.Service;
 import py4j.GatewayServer;
 
-import javax.annotation.Resource;
 
 @Service
 public class BSEService {
@@ -38,7 +37,7 @@ public class BSEService {
                 getPythonServerEntryPoint(new Class[]{AlgorithmParameterTransfer.class});
         String callStateString = "";
         try {
-            callStateString = entryPoint.transferAlgorithmParameter(bseAlgorithmParameterRequest);
+            callStateString = entryPoint.transferAlgorithmParameter(bseAlgorithmParameterRequest, BSEConstant.BSE_FILENAME);
         } catch (Exception e) {
             e.printStackTrace();
         }
