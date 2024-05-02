@@ -29,9 +29,6 @@ public class BSEController {
             return new BaseResponse<>(ErrorCode.PARAMS_ERROR);
         }
 
-        // validate the parameter
-
-
         String callStateString = bseService.transferAlgorithmParameter(bseAlgorithmParameterRequest);
 
         if (callStateString.equals(CallbackState.Success.getMessage())) {

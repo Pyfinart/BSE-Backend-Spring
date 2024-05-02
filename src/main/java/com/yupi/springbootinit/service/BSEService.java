@@ -28,8 +28,10 @@ public class BSEService {
     }
 
     public String transferAlgorithmParameter(BSEAlgorithmParameterRequest bseAlgorithmParameterRequest) {
+        // validate the parameter
         validateParameter(bseAlgorithmParameterRequest);
 
+        // interact with python BSE
         GatewayServer gatewayServer = new GatewayServer();
         gatewayServer.start();
         AlgorithmParameterTransfer entryPoint = (AlgorithmParameterTransfer) gatewayServer.
